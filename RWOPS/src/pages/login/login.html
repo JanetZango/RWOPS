@@ -1,0 +1,47 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content >
+
+  <div style="height: 40%;" *ngIf="logo">
+      <img class="graphic" src="../../assets/icon/4ir.png" alt="" srcset="">
+      <img style="width: 80%; margin: 15% auto; display: flex;" src="../../assets/imgs/Approved-Science-and-Innovation-DSI-cmyk-02.jpeg">
+  </div>
+  
+  
+    <div padding style="position: relative; top: 0%;">
+        <h1>Sign-in</h1>
+  
+            <ion-item>
+              <ion-input type="email" placeholder="Email" name="email" #email="ngModel"  ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
+              <span style="color: red" *ngIf="!email.valid && email.touched" class="help-block">Please enter your email</span>
+            </ion-item>
+          
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" #password="ngModel" ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
+                <span style="color: red" *ngIf="!password.valid && password.touched" class="help-block">Please enter password</span>
+            </ion-item>
+          
+          <!-- </ion-list> -->
+          <div style="position: relative; margin: auto; display: flex; justify-content: flex-end;">
+              <button ion-button clear small (click)="forgotpassword()">Forgot Password?</button>
+          </div>
+          <br>
+          <br>
+          <button ion-button block color="btn" (click)="SignIn(email.value,password.value)">Sign in</button>
+          <button (click)="signup()" ion-button clear  block>Not a registered employee?  &nbsp; <b>Sign up</b> </button>
+    </div>
+  <div>
+    <img class="bottomimg" *ngIf="lowdesign" src="../../assets/icon/New Project.svg" alt="" srcset="">
+  </div>
+  </ion-content>
+  

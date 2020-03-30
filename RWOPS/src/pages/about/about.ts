@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component ,ViewChild} from '@angular/core';
+import { NavController,Slides } from 'ionic-angular';
+
+
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
-
+  @ViewChild('mySlider')  slides: Slides;
   constructor(public navCtrl: NavController) {
 
+  }
+
+  swipeNext(){
+    this.slides.slideNext();
   }
 
 }

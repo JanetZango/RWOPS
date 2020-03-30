@@ -1,105 +1,374 @@
-
 <ion-content class="content">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <h2>Application Form</h2>
-  <p>Please fill in the form to be granted permission to work else where</p>
-   <div class="list">
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Enter your persal_number"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="First names"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Surname"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Id number"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Office phone number"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Cell phone number"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Email address"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Postal Address"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Postal Code"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="home"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Department name"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Branch/cluster"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Directorate/Unit"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Job title"></ion-input>
-    </ion-item>
-    <h2>Section two</h2>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Current working hours"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Call/standby duties hours"></ion-input>
-    </ion-item>
-    <ion-item  class="item">
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Current overtime hours worked"></ion-input>
-    </ion-item>
-   
-  </div>
+  <p class="p">Please fill in the form to be granted permission to work else where</p>
+  <ion-slides pager="true" pager="false" #mySlider>
+    <ion-slide>
+      <div class="list">
+        <p>Section A: Personal Details of Applicant</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-id-badge icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Persal number"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-user icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="First names"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-user icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Surname"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-id-badge icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Id number"></ion-input>
+        </ion-item>
+
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-phone icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Office phone number"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-phone icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Cell phone number"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-envelope icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Email address"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-address-book icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Postal Address"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-address-book icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Postal Code"></ion-input>
+        </ion-item>
+        <div class="nextBtn">
+          <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="list2">
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Department name"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-group icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Branch/cluster"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Directorate/Unit"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Job title"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-user icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Name of Professional"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-id-badge icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Registration number"></ion-input>
+        </ion-item>
+        <!-- <ion-item class="item"> -->
+        <!-- <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label> -->
+        <textarea type="text" id="desc" max="250" [value]="name" [(ngModel)]="name" placeholder="Job Description">
+          </textarea>
+        <!-- </ion-item> -->
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="list3">
+        <p>Section B: Working Hours</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Current working hours"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Call/standby duties hours"></ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-end icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Current overtime hours worked">
+          </ion-input>
+        </ion-item>
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="list6">
+        <p class="workPara">Section C: Application for Other Remunerative Work</p>
+        <ion-item class="item">
+          <ion-label>Category of Work
+          </ion-label>
+          <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Cancel" okText="Select">
+            <ion-option value="bacon">Architecture Planning and Surveying</ion-option>
+            <ion-option value="olives">Building Construction</ion-option>
+            <ion-option value="xcheese">Consultancy Work</ion-option>
+            <ion-option value="peppers">Design(Textiles,Graphics</ion-option>
+            <ion-option value="mushrooms">Framing and Breeding</ion-option>
+            <ion-option value="onions">Fashion Design/Sewing</ion-option>
+            <ion-option value="pepperoni">Financial Markets</ion-option>
+            <ion-option value="pineapple">Fitness Industry</ion-option>
+            <ion-option value="sausage">Sausage</ion-option>
+            <ion-option value="Spinach" disabled>Sub Categories of Health Professionals</ion-option>
+            <ion-option value="Spinach">Medical Doctors</ion-option>
+            <ion-option value="Spinach">Nursing and MidWifery Professionals</ion-option>
+            <ion-option value="Spinach">Traditional and Complementary Professionals</ion-option>
+            <ion-option value="Spinach">Sport Scientists</ion-option>
+            <ion-option value="Spinach">Paramedical Practitioners</ion-option>
+            <ion-option value="Spinach">Veterinarians</ion-option>
+            <ion-option value="Spinach">Other</ion-option>
+            <ion-option value="Spinach">Hospitality Industry</ion-option>
+            <ion-option value="Spinach">Import and Export Business</ion-option>
+            <ion-option value="Spinach">Information and Communication </ion-option>
+            <ion-option value="Spinach">Logistics and Transport </ion-option>
+            <ion-option value="Spinach">Manufacturing Mining Construction</ion-option>
+            <ion-option value="Spinach">Retail and Wholesale Trade</ion-option>
+            <ion-option value="Spinach">Sales and Markerting </ion-option>
+            <ion-option value="Spinach">Security Industry</ion-option>
+            <ion-option value="Spinach">Sports Recreation and Cultural</ion-option>
+            <ion-option value="Spinach">Training Research and Development </ion-option>
+            <ion-option value="Spinach">Tavern Owner ad Restaurants </ion-option>
+            <ion-option value="Spinach">Pastoral Services</ion-option>
+            <ion-option value="Spinach">Funeral Parlor</ion-option>
+            <ion-option value="Spinach">Other</ion-option>
+          </ion-select>
+        </ion-item>
+        <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
+          </textarea>
+        <p>Planned start date of other remunerative work</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-calendar-o icon"></i>
+          </ion-label>
+          <ion-input type="date" [value]="name" [(ngModel)]="name" placeholder="Describe the nature of work">
+          </ion-input>
+        </ion-item>
+        <p>Planned end date of other remunerative work</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-calendar-o icon"></i>
+          </ion-label>
+          <ion-input type="date" [value]="name" [(ngModel)]="name" placeholder="Describe the nature of work">
+          </ion-input>
+        </ion-item>
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <p class="daysPara">Specify the days of the week and specific hours that work will be performed</p>
+      <div class="list4">
+
+        <p>Monday</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="Monday" placeholder="Hours"></ion-input>
+        </ion-item>
+        <p>Tuesday</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="Tuesday" placeholder="Hours">
+          </ion-input>
+        </ion-item>
+        <p>Wednesday</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="Wednesday" placeholder="Hours">
+          </ion-input>
+        </ion-item>
+        <p>Thursday</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="Thursday" placeholder="Hours">
+          </ion-input>
+        </ion-item>
+        <p>Friday</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="Friday" placeholder="Hours">
+          </ion-input>
+        </ion-item>
+        <!-- <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
+            </textarea> -->
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="list4">
+        <p>If the remunerative work will be undertaken with/in an established business or organisation ,please provide details</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-hourglass-3 icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="Friday"
+            placeholder="Total number of hours planned performing the remunerative work(per month">
+          </ion-input>
+        </ion-item>
+        <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
+                  </textarea>
+
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label>
+          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Name of Business/Organization">
+          </ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-user icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Surname">
+          </ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-user icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Initials">
+          </ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-phone icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name"
+            placeholder="Contact number of business/organisation">
+          </ion-input>
+        </ion-item>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-phone icon"></i>
+          </ion-label>
+          <ion-input type="number" [value]="name" [(ngModel)]="name"
+            placeholder="Contact number of person you will be reporting to">
+          </ion-input>
+        </ion-item>
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="list5">
+        <p class="declarationPara">Section D: Declaration</p>
+        <p class="declarationParagraph">I <b>Janet</b> hereby confirm that the information supplied in this application form is correct and undertake to assist my
+          department in meeting its service delivery demands, including overtime commitments (if applicable), which
+          includes being on call/standby (when applicable) as scheduled. I acknowledge that my first commitment is to
+          meet the operational objectives of my department.
+          I confirm that my performance of other remunerative work will in no way interfere with my commitments to my
+          department.
+          I confirm that my performance of other remunerative work will not take place during the hours I am required
+          for duties as agreed in my employment contract.
+          I confirm that I will not use any state resources for the purpose of performing other remunerative work.
+          I accept that I shall not conduct business with any organ of the state, either in person or as part of an
+          entity (including non-profit organisations).
+          I accept that permission to perform other remunerative work is only granted for the time agreed upon (and
+          reflected on the certificate of approval), and that it only applies to the services/types of remunerative work
+          as indicated in this application form.
+          I accept that, should I wish to continue with such remunerative work, I must submit a new application at least
+          30 days before expiry.
+          I accept that non-compliance with any of the conditions, monitoring or control measures pertaining to other
+          remunerative work may lead to disciplinary action and that the sanction imposed includes forfeiture of
+          remuneration and/or benefits gained.
+          I accept that the normal policies and measures governing discipline also apply in terms of non-compliance with
+          the other remunerative work policy and measures.
+          I agree to abide by any control measures applicable to the other remunerative work system, including that it
+          may be required of me to sign in and out each time I enter or exit the institution where I perform my basic or
+          overtime duties.
+          I agree to attach the certificate of approval when disclosing my financial interests, if applicable.
+          I acknowledge that the Executive Authority or delegated authority can, at any time, terminate my authorisation
+          to perform other remunerative work, based on a change in operational requirements and/or poor performance on
+          my part.</p>
+       
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+
+
+
+
+  </ion-slides>
+
 </ion-content>

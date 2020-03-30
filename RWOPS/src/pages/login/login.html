@@ -11,7 +11,7 @@
 </ion-header> -->
 
 <ion-content >
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <div style="height: 40%;" *ngIf="logo">
       <img class="graphic" src="../../assets/icon/4ir.png" alt="" srcset="">
       <img style="width: 80%; margin: 15% auto; display: flex;" src="../../assets/imgs/Approved-Science-and-Innovation-DSI-cmyk-02.jpeg">
@@ -22,11 +22,17 @@
         <h1>Sign-in</h1>
   
             <ion-item>
+                <ion-label>
+                    <i class="fa fa-envelope icon"></i>
+                  </ion-label>
               <ion-input type="email" placeholder="Email" name="email" #email="ngModel"  ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
               <span style="color: red" *ngIf="!email.valid && email.touched" class="help-block">Please enter your email</span>
             </ion-item>
           
             <ion-item>
+                <ion-label>
+                    <i class="fa fa-lock icon"></i>
+                  </ion-label>
               <ion-input type="password" placeholder="Password" name="password" #password="ngModel" ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
                 <span style="color: red" *ngIf="!password.valid && password.touched" class="help-block">Please enter password</span>
             </ion-item>
@@ -38,7 +44,7 @@
           <br>
           <br>
           <button ion-button block color="btn" (click)="SignIn(email.value,password.value)">Sign in</button>
-          <button (click)="signup()" ion-button clear  block>Not a registered employee?  &nbsp; <b>Sign up</b> </button>
+          <button (click)="signup()" ion-button clear  block>You haven't Registered?  &nbsp; <b>Sign up</b> </button>
     </div>
   <div>
     <img class="bottomimg" *ngIf="lowdesign" src="../../assets/icon/New Project.svg" alt="" srcset="">

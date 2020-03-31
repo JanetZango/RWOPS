@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 import { TabsPage } from '../tabs/tabs';
-import { RegisterPage } from '../register/register';
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the RegisterPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,20 +12,18 @@ import { RegisterPage } from '../register/register';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-register',
+  templateUrl: 'register.html',
 })
-export class LoginPage {
-
+export class RegisterPage {
   logo:boolean = true
   lowdesign:boolean = true
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad RegisterPage');
   }
-
   onInput($event){
     this.logo = false
     this.lowdesign = false
@@ -42,11 +40,10 @@ export class LoginPage {
         });
     }
   }
-  signup(){
-    this.navCtrl.push(RegisterPage)
+  signIn(){
+    this.navCtrl.push(LoginPage)
   }
-  SignIn()
- {
-  this.navCtrl.push(TabsPage)
- }
+  SignUp(){
+    this.navCtrl.push(TabsPage)
+  }
 }

@@ -3,20 +3,21 @@
   <ion-slides pager="true" pager="false" #mySlider>
     <ion-slide>
       <div class="contentdiv">
-          <img src="../../assets/icon/pngguru 1.png">
-          <p class="titleP">REPUBLIC OF SOUTH AFRICA</p>
-          <p class="titleT">APPLICATION TO PERFORM OTHER REMUNERATIVE WORK
-            IN TERMS OF SECTION 30 OF THE PUBLIC SERVICE ACT</p>
-          <p class="titlepara">In accordance with the provisions of section 30 of the Public Service Act, 1994 (Proclamation No. 103 of 1994)
-            [“the Act”] as amended, this form must be completed by any permanent or temporary employee of any Provincial
-            Department, National Department or Government Component as contemplated in section 8 of the Act, who wishes to
-            perform other remunerative work.</p>
-            <button ion-button  (click)="moveToNext()">Apply for RWOPS</button>
+        <img src="../../assets/icon/pngguru 1.png">
+        <p class="titleP">REPUBLIC OF SOUTH AFRICA</p>
+        <p class="titleT">APPLICATION TO PERFORM OTHER REMUNERATIVE WORK
+          IN TERMS OF SECTION 30 OF THE PUBLIC SERVICE ACT</p>
+        <p class="titlepara">In accordance with the provisions of section 30 of the Public Service Act, 1994
+          (Proclamation No. 103 of 1994)
+          [“the Act”] as amended, this form must be completed by any permanent or temporary employee of any Provincial
+          Department, National Department or Government Component as contemplated in section 8 of the Act, who wishes to
+          perform other remunerative work.</p>
+        <button ion-button (click)="moveToNext()">Apply for RWOPS</button>
       </div>
     </ion-slide>
     <ion-slide>
       <div class="list">
-        <p>Section A: Personal Details of Applicant</p>
+        <h1>Section A: Personal Details of Applicant</h1>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-id-badge icon"></i>
@@ -75,14 +76,13 @@
           </ion-label>
           <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Postal Code"></ion-input>
         </ion-item>
-        <div class="nextBtn">
-          <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
-              aria-hidden="true"></i></button>
-        </div>
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
       </div>
     </ion-slide>
     <ion-slide>
       <div class="list2">
+        <h1>Section A: Personal Details of Applicant</h1>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-institution icon"></i>
@@ -119,35 +119,36 @@
           </ion-label>
           <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Registration number"></ion-input>
         </ion-item>
-        <!-- <ion-item class="item"> -->
-        <!-- <ion-label>
-            <i class="fa fa-institution icon"></i>
-          </ion-label> -->
         <textarea type="text" id="desc" max="250" [value]="name" [(ngModel)]="name" placeholder="Job Description">
           </textarea>
-        <!-- </ion-item> -->
       </div>
       <div class="nextBtn">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
             aria-hidden="true"></i></button>
       </div>
 
+
     </ion-slide>
     <ion-slide>
       <div class="list3">
-        <p>Section B: Working Hours</p>
+        <h1>Section B: Working Hours</h1>
+        <br>
+        <br>
+        <p>Current working hours of the applicant (per week)</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-hourglass-3 icon"></i>
           </ion-label>
           <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Current working hours"></ion-input>
         </ion-item>
+        <p>Call/standby duties hours (per week)</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-hourglass-3 icon"></i>
           </ion-label>
           <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Call/standby duties hours"></ion-input>
         </ion-item>
+        <p>Current overtime hours worked (per month)</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-hourglass-end icon"></i>
@@ -156,7 +157,7 @@
           </ion-input>
         </ion-item>
       </div>
-      <div class="nextBtn">
+      <div class="nextBtn3">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
             aria-hidden="true"></i></button>
       </div>
@@ -164,7 +165,7 @@
     </ion-slide>
     <ion-slide>
       <div class="list6">
-        <p class="workPara">Section C: Application for Other Remunerative Work</p>
+        <h1>Section C: Application for Other Remunerative Work</h1>
         <ion-item class="item">
           <ion-label>Category of Work
           </ion-label>
@@ -202,6 +203,7 @@
             <ion-option value="Spinach">Other</ion-option>
           </ion-select>
         </ion-item>
+        <p>Describe in detail the nature of the work that will be performed, i.e. company activities and your role</p>
         <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
           </textarea>
         <p>Planned start date of other remunerative work</p>
@@ -221,16 +223,16 @@
           </ion-input>
         </ion-item>
       </div>
-      <div class="nextBtn">
+      <div class="nextBtn5">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
             aria-hidden="true"></i></button>
       </div>
 
     </ion-slide>
     <ion-slide>
-      <p class="daysPara">Specify the days of the week and specific hours that work will be performed</p>
       <div class="list4">
-
+        <h1>Section C: Application for Other Remunerative Work</h1>
+        <p class="daysPara">Specify the days of the week and specific hours that work will be performed</p>
         <p>Monday</p>
         <ion-item class="item">
           <ion-label>
@@ -280,9 +282,12 @@
 
     </ion-slide>
     <ion-slide>
-      <div class="list4">
-        <p>If the remunerative work will be undertaken with/in an established business or organisation ,please provide
-          details</p>
+
+      <div class="list5">
+        <h1>Section C: Application for Other Remunerative Work</h1>
+        <!-- <p>If the remunerative work will be undertaken with/in an established business or organisation ,please provide
+          details</p> -->
+        <p>Total number of hours planned for performing the remunerative work (per month)</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-hourglass-3 icon"></i>
@@ -291,9 +296,12 @@
             placeholder="Total number of hours planned performing the remunerative work(per month">
           </ion-input>
         </ion-item>
+        <p>Specify where the remunerative work will be performed (e.g. Home, Office, School,
+          Door-to-door, etc.)</p>
         <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
                   </textarea>
-
+        <p>If the remunerative work will be undertaken with/in an established business ororganisation, please provide details</p>
+        <p>Name of business/organisation)</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-institution icon"></i>
@@ -301,6 +309,8 @@
           <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Name of Business/Organization">
           </ion-input>
         </ion-item>
+        <p>Details of person you will be reporting to</p>
+        <p>Surname</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-user icon"></i>
@@ -308,6 +318,7 @@
           <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Surname">
           </ion-input>
         </ion-item>
+        <p>Initials</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-user icon"></i>
@@ -315,6 +326,7 @@
           <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Initials">
           </ion-input>
         </ion-item>
+        <p>Contact number of business/organisation</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-phone icon"></i>
@@ -323,6 +335,7 @@
             placeholder="Contact number of business/organisation">
           </ion-input>
         </ion-item>
+        <p>Contact number of person you will be reporting to</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-phone icon"></i>

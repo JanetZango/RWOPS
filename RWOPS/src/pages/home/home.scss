@@ -1,16 +1,24 @@
 page-home {
+    .scroll-content {    
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
     .titleP{
-        color:black;
-        font-size:0.5em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        color:#0B8349;
+        font-size:0.6em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        text-justify: inter-word;
     }
    .titleT{
     color:black;
     font-size:0.7em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
    }
    .contentdiv{
        margin-top:20px;
+       text-align: center;
        button{
            background-color: #0B8349;
            width: 50%;
@@ -23,14 +31,17 @@ h2{
 .titlepara{
     color:black;
     font-size:0.7em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    padding:10px;
 }
+
 p{
-    text-align: center;
-    padding-left:13px;
-    font-size: 1em;
+    font-size: 0.8em;
+    text-align: left;
+    padding-left:20px;
     color:#0B8349;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .p{
     text-align: center;
@@ -39,43 +50,64 @@ p{
     color:grey;
 }
 .list{
-    position: relative;
-    top: -10px;
-    overflow-y: scroll
-    // border:2px solid red;
-    // height:100%;
- 
+    text-align: right;
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
 }
 .list2{
-    position: relative;
-    top: -20px;
-    // border:2px solid red;
-    // height:100%;
- 
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
 }
 #desc{
-    height:200px;
-    width:348px;
+    width:94%;
+    height: 130px;
     font-size:0.7em;
-    padding:10px;
+    // padding:10px;
+  
     ::-webkit-textarea-placeholder{
         color: rgb(199, 199, 199);
     }
 }
 .list3{
-    position: relative;
-    top: -150px;
-    // border:2px solid red;
-    // height:100%;
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
+
  
 }
 .list4{
-    position: relative;
-    // top: -380px;
-    // border:2px solid red;
-    // height:100%;
-    p{
-        text-align: left;
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
     }
  
 }
@@ -93,29 +125,65 @@ p{
 
 }
 .daysPara{
-    // margin-top:-5px;
+    color: grey;
+    font-size: 0.6em;
+    text-align: center;
 }
 .workPara{
     margin-top:120px;
     // text-align: center;
 }
 .list4{
-    position: relative;
-    // top: -110px;
-    // border:2px solid red;
-    // height:100%;
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
  
 }
 .list6{
-    position: relative;
-    top: -60px;
-    // border:2px solid red;
-    // height:100%;
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
     ion-label{
         color: rgb(199, 199, 199);
     }
     p{
         text-align: left;
+    }
+ 
+}
+.list5{
+  
+    h1{
+        text-align: center;
+        padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
+    ion-label{
+        color: rgb(199, 199, 199);
+    }
+    p{
+        text-align: left;
+        color:#0B8349;
+        font-size: 0.7em;
     }
  
 }
@@ -163,14 +231,35 @@ b{
     background-image:
 linear-gradient(to bottom, rgba(245, 246, 252, 0.891), rgba(250, 243, 243, 0.952)),
 url('../../assets/imgs/407893.png');
+background-size: cover;
  
 }
 .nextBtn{
     text-align: right;
-  
+    margin-top:80px;
    button{
     color: #E59647;
     margin-top:-100px;
+
+   }
+   
+}
+.nextBtn3{
+    text-align: right;
+    // margin-top:80px;
+   button{
+    color: #E59647;
+    margin-top:150px;
+
+   }
+   
+}
+.nextBtn5{
+    text-align: right;
+    margin-top:-80px;
+   button{
+    color: #E59647;
+    margin-top:150px;
 
    }
    
@@ -219,9 +308,7 @@ url('../../assets/imgs/407893.png');
     color: #E59647;
     background-color: #0B8349;
 }
-.list5{
-    margin-top:140px;
-}
+
 
 
 }

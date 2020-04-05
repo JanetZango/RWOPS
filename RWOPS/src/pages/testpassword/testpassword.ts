@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Md5 } from 'ts-md5/dist/md5';
 /**
  * Generated class for the TestpasswordPage page.
  *
@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'testpassword.html',
 })
 export class TestpasswordPage {
-
+  passwordPlain: string;
+  password;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -22,8 +23,13 @@ export class TestpasswordPage {
     console.log('ionViewDidLoad TestpasswordPage');
   }
 
-  // password(){
-  //    var pass= md5('password') 
-  //    console.log(pass)
-  // }
+
+   
+
+    Password(){
+      var pass= Md5.hashStr('password')
+      console.log(pass)
+     
+    }
+  
 }

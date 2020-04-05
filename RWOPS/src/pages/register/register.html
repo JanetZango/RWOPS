@@ -12,6 +12,7 @@
 
 <ion-content>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <div style="height: 40%;" *ngIf="logo">
     <img class="graphic" src="../../assets/icon/4ir.png" alt="" srcset="">
     <img style="width: 80%; margin: 10% auto; display: flex;"
@@ -21,45 +22,146 @@
 
   <div padding style="position: relative; top: 0%;">
     <h1>Sign-up</h1>
-
-    <ion-item>
-      <ion-label>
-        <i class="fa fa-user icon"></i>
-      </ion-label>
-      <ion-input type="text" placeholder="Persal number" name="name" #name="ngModel" ngModel required
-        (ionFocus)='onInput($event)' (ionBlur)='noInput($event)'></ion-input>
-      <span class="help-block" style="color: red" *ngIf="!name.valid && name.touched">Please enter your Persal</span>
-
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <i class="fa fa-envelope icon"></i>
-      </ion-label>
-      <ion-input type="email" placeholder="Email" #email="ngModel" ngModel required (ionFocus)='onInput($event)'
-        (ionBlur)='noInput($event)'></ion-input>
-      <span class="help-block" style="color: red" *ngIf="!email.valid && email.touched">Please enter your email</span>
-
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <i class="fa fa-lock icon"></i>
-      </ion-label>
-      <ion-input type="password" placeholder="Password" name="password" #password="ngModel" ngModel required
-        (ionFocus)='onInput($event)' (ionBlur)='noInput($event)'></ion-input>
-      <span class="help-block" style="color: red" *ngIf="!password.valid && password.touched">Please enter your
-        password</span>
-
-    </ion-item>
-
-    <!-- </ion-list> -->
-    <!-- <div style="position: relative; margin: auto; display: flex; justify-content: flex-end;">
-                <button ion-button clear small >Forgot Password?</button>
-            </div> -->
-    <br>
-    <br>
-    <button ion-button block color="btn" (click)="SignUp()">Sign Up</button>
-    <button ion-button clear block (click)="signIn()">Go Back To &nbsp; <b>Sign In</b> </button>
+    <form [formGroup]="userForm" (ngSubmit)="formSubmit()">
+      <ion-slides pager="true">
+        <ion-slide>
+            <ion-item>
+                <ion-label>
+                  <i class="fa fa-user icon"></i>
+                </ion-label>
+                <ion-input type="text" placeholder="firstname" formControlName="firstname" 
+                 ></ion-input>
+              
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <i class="fa fa-user icon"></i>
+                </ion-label>
+                <ion-input type="text" placeholder="surname" formControlName="surname" 
+                 ></ion-input>
+              
+              </ion-item>
+              <ion-item>
+                  <ion-label>
+                    <i class="fa fa-user icon"></i>
+                  </ion-label>
+                  <ion-input type="text" placeholder="username" formControlName="username" 
+                   ></ion-input>
+                
+                </ion-item>
+        </ion-slide>
+          <ion-slide>
+            
+                  <ion-item>
+                      <ion-label>
+                        <i class="fa fa-address-book icon"></i>
+                      </ion-label>
+                      <ion-input type="text" placeholder="post address" formControlName="postal_address" 
+                       ></ion-input>
+                    
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>
+                          <i class="fa fa-address-book icon"></i>
+                        </ion-label>
+                        <ion-input type="number" placeholder="post code" formControlName="postal_code" 
+                         ></ion-input>
+                      
+                      </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <i class="fa fa-id-badge icon"></i>
+                  </ion-label>
+                  <ion-input type="email" placeholder="id_number" formControlName="id_number" 
+                   ></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <i class="fa fa-id-badge icon"></i>
+                  </ion-label>
+                  <ion-input type="number" placeholder="persal_number" formControlName="persal_number" 
+                   ></ion-input>
+                </ion-item>
+            </ion-slide>
+            <ion-slide>
+                <ion-item>
+                    <ion-label>
+                      <i class="fa fa-envelope icon"></i>
+                    </ion-label>
+                    <ion-input type="text" placeholder="email" formControlName="email"
+                     ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>
+                      <i class="fa fa-lock icon"></i>
+                    </ion-label>
+                    <ion-input type="number" placeholder="password" formControlName="password_hash" 
+                     ></ion-input>
+                  </ion-item> 
+                  <ion-item>
+                    <ion-label>Select Designation</ion-label>
+                    <ion-select formControlName="designation_id" >
+                      <ion-option *ngFor="let district of listFilteredLookupDesignated" [value]="district.id">{{district.designation}}</ion-option>
+                    </ion-select>
+                  </ion-item> 
+            </ion-slide>
+            <ion-slide>
+              <ion-item>
+                <ion-label>Select Department</ion-label>
+                <ion-select formControlName="department_id" >
+                  <ion-option *ngFor="let district of listFilteredLookupDistrict" [value]="district.department_id">{{district.description}}</ion-option>
+                </ion-select>
+              </ion-item> 
+              <ion-item>
+                <ion-label>Select Branch</ion-label>
+                <ion-select formControlName="branch_id" >
+                  <ion-option *ngFor="let district of listFilteredLookupMunicipality" [value]="district.department_id">{{district.description}}</ion-option>
+                </ion-select>
+              </ion-item> 
+              <ion-item>
+                <ion-label>Select Job</ion-label>
+                <ion-select formControlName="job_title_id" >
+                  <ion-option *ngFor="let district of listFilteredLookupJob" [value]="district.id">{{district.description}}</ion-option>
+                </ion-select>
+              </ion-item> 
+              <ion-item>
+                  <ion-label>Select Unit</ion-label>
+                  <ion-select formControlName="job_title_id" >
+                    <ion-option *ngFor="let district of listFilteredLookupUnit" [value]="district.id">{{district.description}}</ion-option>
+                  </ion-select>
+                </ion-item> 
+            </ion-slide>
+            <ion-slide>
+              
+                  <ion-item>
+                    <ion-label>
+                      <i class="fa fa-phone icon"></i>
+                    </ion-label>
+                    <ion-input type="number" placeholder="tel_number" formControlName="tel_number" 
+                     ></ion-input>
+                  </ion-item> 
+                  <ion-item>
+                    <ion-label>
+                      <i class="fa fa-phone icon"></i>
+                    </ion-label>
+                    <ion-input type="number" placeholder="cell_number" formControlName="cell_number" 
+                     ></ion-input>
+                  </ion-item> 
+                  <!-- </ion-list> -->
+                  <!-- <div style="position: relative; margin: auto; display: flex; justify-content: flex-end;">
+                            <button ion-button clear small >Forgot Password?</button>
+                        </div> -->
+                  <br>
+                  <br>
+                  <button ion-button block type="submit" color="btn"  [disabled]="!userForm.valid">Sign Up</button>
+                  <button ion-button clear block (click)="signIn()">Go Back To &nbsp; <b>Sign In</b> </button>
+            </ion-slide>
+      </ion-slides>
+      
+      
+     
+   
+    </form>
   </div>
   <div>
     <img class="bottomimg" *ngIf="lowdesign" src="../../assets/icon/New Project.svg" alt="" srcset="">

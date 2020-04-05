@@ -18,63 +18,83 @@
     <ion-slide>
       <div class="list">
         <h1>Section A: Personal Details of Applicant</h1>
+        <p>Persal Number</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-id-badge icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Persal number"></ion-input>
+          <ion-input type="text" disabled [value]="persal_number" [(ngModel)]="persal_number" placeholder="Persal number"></ion-input>
         </ion-item>
-
+        <p>First Names</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-user icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="First names"></ion-input>
+          <ion-input type="text" disabled [value]="firstname" [(ngModel)]="firstname" placeholder="First names"></ion-input>
         </ion-item>
-
+        <p>Surname</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-user icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Surname"></ion-input>
+          <ion-input type="text" disabled [value]="surname" [(ngModel)]="surname" placeholder="Surname"></ion-input>
         </ion-item>
-
+        <p>ID Number</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-id-badge icon"></i>
           </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Id number"></ion-input>
+          <ion-input type="number" disabled [value]="id_number" [(ngModel)]="id_number" placeholder="Id number"></ion-input>
+        </ion-item>
+        <p>OfficePhone Number</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-phone icon"></i>
+          </ion-label>
+          <ion-input type="number" disabled [value]="tel_number" [(ngModel)]="tel_number" placeholder="Office phone number"></ion-input>
         </ion-item>
 
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="list">
+        <h1>Section A: Personal Details of Applicant</h1>
+        <p>CellPhone Number</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-phone icon"></i>
           </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Office phone number"></ion-input>
+          <ion-input type="number" disabled [value]="cell_number" [(ngModel)]="cell_number" placeholder="Cell phone number"></ion-input>
         </ion-item>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-phone icon"></i>
-          </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Cell phone number"></ion-input>
-        </ion-item>
+        <p>Email Address</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-envelope icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Email address"></ion-input>
+          <ion-input type="text"  disabled [value]="email" [(ngModel)]="email" placeholder="Email address"></ion-input>
         </ion-item>
+        <p>Postal Address</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-address-book icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Postal Address"></ion-input>
+          <ion-input type="text" disabled [value]="postal_address" [(ngModel)]="postal_address" placeholder="Postal Address"></ion-input>
         </ion-item>
+        <p>Postal Code</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-address-book icon"></i>
           </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="name" placeholder="Postal Code"></ion-input>
+          <ion-input type="number" disabled [value]="postal_code" [(ngModel)]="postal_code" placeholder="Postal Code"></ion-input>
+        </ion-item>
+        <p>Department Name</p>
+        <ion-item class="item">
+          <ion-label>
+            <i class="fa fa-institution icon"></i>
+          </ion-label>
+          <ion-input type="text"  disabled [value]="departent_id" [(ngModel)]="departent_id" placeholder="Department name"></ion-input>
         </ion-item>
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
             aria-hidden="true"></i></button>
@@ -83,44 +103,34 @@
     <ion-slide>
       <div class="list2">
         <h1>Section A: Personal Details of Applicant</h1>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-institution icon"></i>
-          </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Department name"></ion-input>
-        </ion-item>
+        <p>Branch/Cluster</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-group icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Branch/cluster"></ion-input>
+          <ion-input type="text"  disabled [value]="branchDescription" [(ngModel)]="branch_id" placeholder="Branch/cluster"></ion-input>
         </ion-item>
+        <p>Directorate/Unit</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-institution icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Directorate/Unit"></ion-input>
+          <ion-input type="text" disabled [value]="unit_id" [(ngModel)]="unit_id" placeholder="Directorate/Unit"></ion-input>
         </ion-item>
+        <p>Job Title</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-institution icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Job title"></ion-input>
+          <ion-input type="text" disabled [value]="jobTitle" [(ngModel)]="job_title_id" placeholder="Job title"></ion-input>
         </ion-item>
+        <p>Name Of Professional</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-user icon"></i>
           </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Name of Professional"></ion-input>
+          <ion-input type="text" disabled [value]="name" [(ngModel)]="name" placeholder="Name of Professional"></ion-input>
         </ion-item>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-id-badge icon"></i>
-          </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Registration number"></ion-input>
-        </ion-item>
-        <textarea type="text" id="desc" max="250" [value]="name" [(ngModel)]="name" placeholder="Job Description">
-          </textarea>
       </div>
       <div class="nextBtn">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
@@ -129,6 +139,27 @@
 
 
     </ion-slide>
+    <ion-slide>
+        <div class="list2">
+          <h1>Section A: Personal Details of Applicant</h1>
+          <p>Registration number</p>
+          <ion-item class="item">
+            <ion-label>
+              <i class="fa fa-id-badge icon"></i>
+            </ion-label>
+            <ion-input type="text" disabled [value]="name" [(ngModel)]="name" placeholder="Registration number"></ion-input>
+          </ion-item>
+          <p>Job Description</p>
+          <textarea type="text" disabled id="desc" max="250" [value]="jobDescription" [(ngModel)]="job_description" placeholder="Job Description">
+            </textarea>
+        </div>
+        <div class="nextBtn">
+          <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+              aria-hidden="true"></i></button>
+        </div>
+  
+  
+      </ion-slide>
     <ion-slide>
       <div class="list3">
         <h1>Section B: Working Hours</h1>
@@ -233,47 +264,35 @@
       <div class="list4">
         <h1>Section C: Application for Other Remunerative Work</h1>
         <p class="daysPara">Specify the days of the week and specific hours that work will be performed</p>
-        <p>Monday</p>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-hourglass-3 icon"></i>
-          </ion-label>
-          <ion-input type="text" [value]="name" [(ngModel)]="Monday" placeholder="Hours"></ion-input>
-        </ion-item>
-        <p>Tuesday</p>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-hourglass-3 icon"></i>
-          </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="Tuesday" placeholder="Hours">
-          </ion-input>
-        </ion-item>
-        <p>Wednesday</p>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-hourglass-3 icon"></i>
-          </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="Wednesday" placeholder="Hours">
-          </ion-input>
-        </ion-item>
-        <p>Thursday</p>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-hourglass-3 icon"></i>
-          </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="Thursday" placeholder="Hours">
-          </ion-input>
-        </ion-item>
-        <p>Friday</p>
-        <ion-item class="item">
-          <ion-label>
-            <i class="fa fa-hourglass-3 icon"></i>
-          </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="Friday" placeholder="Hours">
-          </ion-input>
-        </ion-item>
-        <!-- <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
-            </textarea> -->
+        <div class="your-class">
+          <p>Monday</p>
+          <input name="first_name" id="First_Name" type="text" /> to
+          <input name="last_name" id="Last_Name" type="text" />
+        </div>
+
+        <div class="your-class">
+          <p>Tuesday</p>
+          <input name="first_name" id="First_Name" type="text" /> to
+          <input name="last_name" id="Last_Name" type="text" />
+        </div>
+
+        <div class="your-class">
+          <p>Wednesday</p>
+          <input name="first_name" id="First_Name" type="text" /> to
+          <input name="last_name" id="Last_Name" type="text" />
+        </div>
+
+        <div class="your-class">
+          <p>Thursday</p>
+          <input name="first_name" id="First_Name" type="text" /> to
+          <input name="last_name" id="Last_Name" type="text" />
+        </div>
+
+        <div class="your-class">
+          <p>Friday</p>
+          <input name="first_name" id="First_Name" type="text" /> to
+          <input name="last_name" id="Last_Name" type="text" />
+        </div>
       </div>
       <div class="nextBtn2">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
@@ -292,16 +311,16 @@
           <ion-label>
             <i class="fa fa-hourglass-3 icon"></i>
           </ion-label>
-          <ion-input type="number" [value]="name" [(ngModel)]="Friday"
-            placeholder="Total number of hours planned performing the remunerative work(per month">
+          <ion-input type="number" [value]="name" [(ngModel)]="Friday" placeholder="Total number of hours planned">
           </ion-input>
         </ion-item>
         <p>Specify where the remunerative work will be performed (e.g. Home, Office, School,
           Door-to-door, etc.)</p>
         <textarea type="text" id="desc" [value]="name" [(ngModel)]="name" placeholder="Describe Nature of Work">
                   </textarea>
-        <p>If the remunerative work will be undertaken with/in an established business ororganisation, please provide details</p>
-        <p>Name of business/organisation)</p>
+        <p class="change_font">If the remunerative work will be undertaken with/in an established business
+          ororganisation, please provide details</p>
+        <p>Name of business/organisation</p>
         <ion-item class="item">
           <ion-label>
             <i class="fa fa-institution icon"></i>
@@ -309,6 +328,17 @@
           <ion-input type="text" [value]="name" [(ngModel)]="name" placeholder="Name of Business/Organization">
           </ion-input>
         </ion-item>
+
+      </div>
+      <div class="nextBtn">
+        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="list5">
+        <h1>Section C: Application for Other Remunerative Work</h1>
         <p>Details of person you will be reporting to</p>
         <p>Surname</p>
         <ion-item class="item">
@@ -345,16 +375,16 @@
           </ion-input>
         </ion-item>
       </div>
-      <!-- <div class="nextBtn">
+      <div class="nextBtn">
         <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
             aria-hidden="true"></i></button>
-      </div> -->
-
+      </div>
     </ion-slide>
     <ion-slide>
-      <div class="list5">
-        <p class="declarationPara">Section D: Declaration</p>
-        <p class="declarationParagraph">I <b>Janet</b> hereby confirm that the information supplied in this application
+      <div class="list7">
+        <h1>Section D: Declaration</h1>
+        <p class="declarationParagraph">I <b>Janet Zango</b> hereby confirm that the information supplied in this
+          application
           form is correct and undertake to assist my
           department in meeting its service delivery demands, including overtime commitments (if applicable), which
           includes being on call/standby (when applicable) as scheduled. I acknowledge that my first commitment is to
@@ -384,10 +414,14 @@
           to perform other remunerative work, based on a change in operational requirements and/or poor performance on
           my part.</p>
         <img src="../../assets/imgs/index-of-wp-content-uploads-signatures-signature-png-1440_500.png">
+        <p class="sign">Signature of Applicant</p>
+        <p class="datePara">10/20/2020</p>
+        <p class="mpveDate">(date)</p>
+        <p class="degnPara">Applicant</p>
+        <p class="mpvename">(Designated)</p>
       </div>
-      <div class="nextBtn">
-        <button ion-button clear (click)="moveToNext()">Next<i class="fa fa-chevron-right"
-            aria-hidden="true"></i></button>
+      <div class="nextBtn6">
+        <button ion-button (click)="moveToNext()">Apply</button>
       </div>
 
     </ion-slide>

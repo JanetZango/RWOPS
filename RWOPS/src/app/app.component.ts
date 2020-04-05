@@ -11,7 +11,7 @@ import { TestpasswordPage } from '../pages/testpassword/testpassword';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TestpasswordPage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

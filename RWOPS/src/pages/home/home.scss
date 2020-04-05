@@ -78,7 +78,7 @@ p{
     width:94%;
     height: 130px;
     font-size:0.7em;
-    // padding:10px;
+    padding:10px;
   
     ::-webkit-textarea-placeholder{
         color: rgb(199, 199, 199);
@@ -109,6 +109,9 @@ p{
     button{
        text-align: left; 
     }
+    p{
+        padding-left:20px;
+    }
  
 }
 .declarationPara{
@@ -121,7 +124,7 @@ p{
     padding:10px;
     text-align: justify;
     text-justify: inter-word;
-    margin-top:-10px;
+    // margin-top:-10px;
 
 }
 .daysPara{
@@ -145,6 +148,33 @@ p{
        text-align: left; 
     }
  
+}
+.sign{
+    text-align: center; 
+    font-size: 0.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:-20px;
+}
+.datePara{
+    text-align: right;
+    font-size: 0.6em;
+    padding-left:5px;
+    margin-top:30px;
+}
+.degnPara{
+    text-align: left;
+    font-size: 0.6em;
+    padding-left:5px;
+}
+.mpveDate{
+    text-align: right;
+    font-size: 0.4em;
+    padding-right:5px;
+}
+.mpvename{
+    text-align: left;
+    font-size: 0.4em;
+    padding-right:5px;
 }
 .list6{
     h1{
@@ -187,6 +217,25 @@ p{
     }
  
 }
+.list7{
+  
+    h1{
+        margin-top:40px;
+        text-align: center;
+        // padding-left:13px;
+        font-size: 1.3em;
+        color:#0B8349;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    button{
+       text-align: left; 
+    }
+    ion-label{
+        color: rgb(199, 199, 199);
+    }
+  
+ 
+}
 #mySlider{
     overflow-y: scroll;
   
@@ -213,6 +262,14 @@ p{
         text-align: center;
     }
 }
+.your-class{
+    display:block;
+    input {
+        width:150px;
+      }
+  }
+ 
+
 b{
     text-align: right;
     font-size: 1em;
@@ -227,6 +284,10 @@ b{
         margin:0px auto !important;
     }
 }
+.change_font{
+    color:grey;
+    font-size:0.6em;
+}
 .content{
     background-image:
 linear-gradient(to bottom, rgba(245, 246, 252, 0.891), rgba(250, 243, 243, 0.952)),
@@ -240,6 +301,17 @@ background-size: cover;
    button{
     color: #E59647;
     margin-top:-100px;
+
+   }
+   
+}
+.nextBtn6{
+    text-align: center;
+    margin-top:80px;
+   button{
+    background-color: #0B8349;
+    margin-top:-100px;
+    width:70%;
 
    }
    

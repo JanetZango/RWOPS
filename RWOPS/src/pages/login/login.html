@@ -20,21 +20,21 @@
   
     <div padding style="position: relative; top: 0%;">
         <h1>Sign-in</h1>
-  
+        <form #user="ngForm" (ngSubmit)="getEmail(user)">
             <ion-item>
                 <ion-label>
                     <i class="fa fa-envelope icon"></i>
                   </ion-label>
-              <ion-input type="email" placeholder="Email" name="email" #email="ngModel"  ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
-              <span style="color: red" *ngIf="!email.valid && email.touched" class="help-block">Please enter your email</span>
+              <ion-input type="email" placeholder="Email" ngModel name="email" email required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
+              <!-- <span style="color: red" *ngIf="!email.valid && email.touched" class="help-block">Please enter your email</span> -->
             </ion-item>
           
             <ion-item>
                 <ion-label>
                     <i class="fa fa-lock icon"></i>
                   </ion-label>
-              <ion-input type="password" placeholder="Password" name="password" #password="ngModel" ngModel required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
-                <span style="color: red" *ngIf="!password.valid && password.touched" class="help-block">Please enter password</span>
+              <ion-input type="password" placeholder="Password" ngModel name="password_hash" password_hash required (ionFocus)='onInput($event)'  (ionBlur)='noInput($event)'></ion-input>
+                <!-- <span style="color: red" *ngIf="!password.valid && password.touched" class="help-block">Please enter password</span> -->
             </ion-item>
           
           <!-- </ion-list> -->
@@ -43,8 +43,9 @@
           </div>
           <br>
           <br>
-          <button ion-button block color="btn" (click)="SignIn()">Sign in</button>
+          <button ion-button block type="submit"  color="btn">Sign in</button>
           <button (click)="signup()" ion-button clear  block>You haven't Registered?  &nbsp; <b>Sign up</b> </button>
+        </form>
     </div>
   <div>
     <img class="bottomimg" *ngIf="lowdesign" src="../../assets/icon/New Project.svg" alt="" srcset="">

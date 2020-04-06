@@ -6,7 +6,9 @@ import {UserProfile} from '../../model/userProfile.model'
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError} from 'rxjs/operators';
 import {_throw} from 'rxjs/observable/throw';
-
+import {Application} from '../../model/application.model'
+import {Hours} from '../../model/hours.model'
+import {RemunerativeWork} from '../../model/remunerative_work.model'
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'}),
@@ -23,6 +25,69 @@ export class ServiceProvider {
   constructor(public http: HttpClient,public configService: ConfigService) {
     this.baseUrl = this.configService.apiUrl;
   }
+
+
+  createRemunerativeWork(RemunerativeWork:RemunerativeWork) {
+    const url = `${this.baseUrl}/api/workinghours/post`;
+    console.log(url)
+    var data = this.http.post(url,RemunerativeWork,httpOptions)
+    console.log(data)
+    return data  
+      .pipe(
+        catchError(this.handleError)
+      );
+      
+  }
+
+
+
+  createHours(Hours:Hours) {
+    const url = `${this.baseUrl}/api/workinghours/post`;
+    console.log(url)
+    var data = this.http.post(url,Hours,httpOptions)
+    console.log(data)
+    return data  
+      .pipe(
+        catchError(this.handleError)
+      );
+      
+  }
+
+  GetHours() {
+    const url = `${this.baseUrl}/api/workinghours/get`;
+    console.log(url)
+    var data = this.http.get(url,httpOptions)
+    console.log(data)
+    return data  
+      .pipe(
+        catchError(this.handleError)
+      );
+      
+  }
+  createApplication(Application:Application) {
+    const url = `${this.baseUrl}/api/application/post`;
+    console.log(url)
+    var data = this.http.post(url,Application,httpOptions)
+    console.log(data)
+    return data  
+      .pipe(
+        catchError(this.handleError)
+      );
+      
+  }
+
+  getApplication() {
+    const url = `${this.baseUrl}/api/application/get`;
+    console.log(url)
+    var data = this.http.get(url,httpOptions)
+    console.log(data)
+    return data  
+      .pipe(
+        catchError(this.handleError)
+      );
+      
+  }
+
 
   create(user: User) {
     const url = `${this.baseUrl}/api/user/post`;
@@ -119,6 +184,17 @@ export class ServiceProvider {
 
 
 
+
+  getApplicationStatus(){
+    const url = `${this.baseUrl}/api/applicationstatus/get`;
+    console.log(url)
+    var dataUser = this.http.get(url,httpOptions)
+    console.log(dataUser)
+    return dataUser  
+      .pipe(
+        catchError(this.handleError)
+      );  
+  }
 
   getWorkCategory(){
     const url = `${this.baseUrl}/api/workcategory/get`;

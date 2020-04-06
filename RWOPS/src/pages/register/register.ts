@@ -45,6 +45,7 @@ export class RegisterPage {
     this.getJob();
     this.getDesignation();
     this.getUnit();
+    // this.formSubmit()
   }
   getBranch(){
     this.service.getBranch().subscribe(_responseDataBranch => {
@@ -143,6 +144,7 @@ export class RegisterPage {
     this.User.role = this.userForm.value.department_id;
 
     this.UserProfile = new UserProfile();
+    // console.log(this.UserProfile)
     this.UserProfile.firstname = this.userForm.value.firstname;
     this.UserProfile.surname = this.userForm.value.surname;
     this.UserProfile.email = this.userForm.value.email;
